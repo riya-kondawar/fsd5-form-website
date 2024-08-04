@@ -1,0 +1,150 @@
+<!-- fsd Task 5:- form website html -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login form</title>
+
+    <!-- G font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Almendra:ital,wght@0,400;0,700;1,400;1,700&family=Alumni+Sans+Pinstripe:ital@0;1&family=Alumni+Sans:ital,wght@0,100..900;1,100..900&family=Arya:wght@400;700&family=Barrio&family=BioRhyme:wght@200..800&family=Indie+Flower&family=Josefin+Slab:ital,wght@0,100..700;1,100..700&family=Kalam:wght@300;400;700&family=Martel+Sans:wght@200;300;400;600;700;800;900&family=Play:wght@400;700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Rum+Raisin&display=swap"
+        rel="stylesheet">
+
+    <!--style sheet  -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .main {
+            background-image: linear-gradient(to right bottom, #ffffff, #fbf6fc, #fdebf3, #ffe1e4, #ffd8d0, #eac1b7, #d4ab9e, #bf9686, #8d6d67, #5d4847, #302627, #000000);
+            background-image: linear-gradient(to right, #a87e62, #a97c5f, #ab795c, #ac7759, #ae7457, #a16b50, #946248, #875941, #6a4734, #4e3627, #34251b, #1d150f);
+            background-image: linear-gradient(to right bottom, #f4decb, #e7c9b2, #dab59b, #cea084, #c18c6f, #af7b60, #9e6b51, #8d5b42, #744b35, #5d3c29, #462d1e, #311f13);
+            background-image: linear-gradient(to right bottom, #da9b57, #c79d5c, #b59c64, #a69b6d, #9a9877, #8d886f, #7e7967, #6f6a60, #554e49, #3b3533, #201d1d, #000000);
+            top: 0;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            color: white;
+            font-family: "Play", sans-serif;
+
+        }
+
+        .box {
+            width: 60%;
+            height: 70%;
+            margin: auto;
+            /* background: #000; */
+            display: flex;
+            border-radius: 2rem;
+            border: 1px solid rgb(185, 185, 185);
+            box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.521);
+        }
+
+        .left {
+            width: 50%;
+            max-height: 100%;
+            padding: 2rem;
+
+            /* background: #ce1e1e; */
+            border-radius: 2rem 0 0 2rem;
+
+        }
+
+        .right {
+            width: 50%;
+            max-height: 100%;
+            padding: 2rem;
+            background: url(guitar-vintage.jpg);
+            /* object-fit: cover; */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+
+            border-radius: 0 2rem 2rem 0;
+        }
+
+        button {
+            background-image: linear-gradient(to right bottom, #8e6a52, #8a6852, #866653, #826453, #7e6253, #745a4d, #695347, #5f4b41, #4d3d34, #3c2f27, #2c221c, #1d150f);
+            color: white;
+            border: none;
+            border-radius: 1.5rem;
+            padding: .5rem;
+            margin: .5rem;
+            box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.521);
+        }
+
+        
+        label {
+            line-height: 2rem;
+        }
+
+        input {
+            font-family: "Play", sans-serif;
+            padding: .2rem;
+            border: 1px solid black;
+            border-radius: 1rem;
+        }
+        .btn{
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="box">
+            <div class="left">
+                <h2>LOGIN FORM</h2>
+                <form action="">
+
+                    <label for="name">First Name</label>
+                    <input type="text" name="lname" id="lname" placeholder="Riya"><br>
+
+                    <label for="lname">Last Name</label>
+                    <input type="text" name="lname" id="lname" placeholder="Kondawar"><br>
+
+                    <label for="email">Email Id</label>
+                    <input type="email" name="email" id="email"><br>
+
+                    <label for="contact">Phone Number</label>
+                    <input type="number" name="contact" id="contact"><br>
+
+                    <label for="dob">Date of Birth</label>
+                    <input type="date" name="dob" id="dob"><br>
+
+                    <label for="age">Age</label>
+                    <input type="range" name="age" id="age"><br>
+
+                    <label for="gender">Gender </label><br>
+                    <span><input type="radio" name="gender" id="gender">None<br></span>
+                    <span><input type="radio" name="gender" id="gender">Male<br></span>
+                    <span><input type="radio" name="gender" id="gender">Female<br></span>
+
+                    <div class="btn">
+                        <button type="reset">Reset form</button>
+                        <button type="submit">Submit form</button>
+                    </div>
+
+
+                </form>
+            </div>
+            <div class="right">
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
