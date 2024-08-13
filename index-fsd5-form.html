@@ -31,13 +31,16 @@
             top: 0;
             width: 100vw;
             height: 100vh;
-            display: flex;
+            text-align: center;
+            /* display: flex; */
             align-items: center;
             color: white;
             font-family: "Play", sans-serif;
 
         }
-
+        h1{
+            padding: 30px 0 50px 0;
+        }
         .box {
             width: 60%;
             height: 70%;
@@ -47,6 +50,7 @@
             border-radius: 2rem;
             border: 1px solid rgb(185, 185, 185);
             box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.521);
+            
         }
 
         .left {
@@ -55,6 +59,7 @@
             padding: 2rem;
             /* background: #ce1e1e; */
             border-radius: 2rem 0 0 2rem;
+            text-align: left;
 
         }
 
@@ -70,7 +75,8 @@
 
             border-radius: 0 2rem 2rem 0;
         }
-        .class h2{
+
+        .class h2 {
             font-size: 3rem;
         }
 
@@ -93,7 +99,7 @@
         input {
             font-family: "Play", sans-serif;
             color: white;
-            font-size: 20px;
+            font-size: 16px;
             padding: .2rem .5rem;
             line-height: 1rem;
             /* border: 1px solid black; */
@@ -105,10 +111,20 @@
             /* border-radius: 1rem; */
             /* border-radius: none; */
         }
+        .gender-sect{
+            display: flex;
+            align-items: baseline;
+        }
+        .gender-options{
+            display: flex;
+        }
+        .gender-options input{
+            margin: 0 0 0 1rem;
+        }
 
         ::placeholder {
             color: #ffffff;
-            opacity: 0.7; 
+            opacity: 0.7;
         }
 
         .btn {
@@ -121,21 +137,22 @@
 
 <body>
     <div class="main">
+        <h1>Music Class Registration Form</h1>
         <div class="box">
             <div class="left">
                 <h2>LOGIN FORM</h2>
                 <form action="">
                     <label for="name">First Name</label>
-                    <input type="text" name="lname" id="lname" placeholder="Riya"><br>
+                    <input type="text" name="lname" id="lname" placeholder="Riya" required><br>
 
                     <label for="lname">Last Name</label>
-                    <input type="text" name="lname" id="lname" placeholder="Kondawar"><br>
+                    <input type="text" name="lname" id="lname" placeholder="Kondawar" required><br>
 
                     <label for="email">Email Id</label>
-                    <input type="email" name="email" id="email" placeholder="riya@gmail.com"><br>
+                    <input type="email" name="email" id="email" placeholder="riya@gmail.com" required><br>
 
                     <label for="contact">Phone Number</label>
-                    <input type="number" name="contact" id="contact"><br>
+                    <input type="tel" name="contact" id="contact" placeholder="+91 8208486836" required><br>
 
                     <label for="dob">Date of Birth</label>
                     <input type="date" name="dob" id="dob"><br>
@@ -143,10 +160,30 @@
                     <label for="age">Age</label>
                     <input type="range" name="age" id="age" min="0" max="100" value="18"><br>
 
-                    <label for="gender">Gender </label><br>
-                    <span><input type="radio" name="gender" id="gender">Other<br></span>
-                    <span><input type="radio" name="gender" id="gender">Male<br></span>
-                    <span><input type="radio" name="gender" id="gender">Female<br></span>
+                    <div class="gender-sect">
+                    <label for="gender">Gender</label><br>
+                    <div class="gender-options">   
+                        <input type="radio" name="gender" id="gender">Other<br>
+                        <input type="radio" name="gender" id="gender">Male<br>
+                        <input type="radio" name="gender" id="gender">Female<br>
+                    </div>
+                </div>
+
+                    <label for="edu">Education</label>
+                    <input type="text" name="edu" id="edu" placeholder="Graduate"><br>
+
+
+                    <label for="city">City:</label>
+                    <select name="city" id="city">
+                        <option value="Pune">Pune</option>
+                        <option value="Mumbai">Mumbai</option>
+                        <option value="Bengaluru">Bengaluru</option>
+                        <option value="Delhi">Delhi</option>
+                    </select><br>
+
+                    <label for="address">Home Address:</label>
+                    <textarea name="address" id="address" rows="2" cols="20"></textarea><br>
+
 
                     <div class="btn">
                         <button type="reset">Reset form</button>
